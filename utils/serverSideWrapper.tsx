@@ -62,8 +62,9 @@ const fetchDataFromApi = async (
         }
 
         return !data ? { props: {} } : { props: { data } };
-    } catch (e) {
-        throw new Error('error');
+    } catch (e: any) {
+        console.log('error', e);
+        throw new Error('error', e);
     }
 };
 

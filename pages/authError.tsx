@@ -6,8 +6,7 @@ export const AuthErrorComponent = ({ error }: { error?: string | null }) => {
         <div className="mt-20 m-auto border card w-auto bg-base-100 shadow-xl flex min-h-[6rem] min-w-[18rem] max-w-screen-sm flex-wrap items-center justify-center gap-2 overflow-x-hidden">
             <div className="card-body">
                 <p className="m-auto justify-center text-center p-5">
-                    {error ??
-                        ' You do not have any roles that match the ones used on this website. Please contact IT to get the proper roles set.'}
+                    {error ?? 'ERROR'}
                 </p>
             </div>
         </div>

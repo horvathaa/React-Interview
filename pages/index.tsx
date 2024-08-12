@@ -1,11 +1,10 @@
 import { GetServerSidePropsContext, NextPage } from 'next';
 import serverSideWrapper from '../utils/serverSideWrapper';
 import { getData } from '../utils/axiosClientWrapper';
-import { useContext } from 'react';
+
 import { loaderContext } from '../components/loader/loadContext';
 import ErrorsWrapper from '../utils/ErrorsWrapper';
 import { ErrorAlert } from '../components/errorAlert/errorAlert';
-import { fetchData } from '../utils/clientsideFetchWrapper';
 
 //serverside render, controls access to page
 export const getServerSideProps = async (
@@ -30,7 +29,7 @@ const Landing: NextPage<any> = (props: any) => {
 
     return (
         <ErrorsWrapper error={props?.connectionError}>
-            <div className="bg-white h-auto   py-8 px-10 "></div>
+            <div className="bg-white h-auto py-8 px-10 "></div>
         </ErrorsWrapper>
     );
 };

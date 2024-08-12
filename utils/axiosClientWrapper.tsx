@@ -21,6 +21,11 @@ export const ApiClient = (
     baseAddress?: string,
     passedApiKey?: string
 ) => {
+    if (!process?.env?.API_ENDPOINT) {
+        console.log('API_ENDPOINT not found in .env file');
+        throw new Error('API_ENDPOINT not found in .env file');
+    }
+
     const defaultOptions = {
         baseURL: baseAddress ?? process.env.API_ENDPOINT,
     };

@@ -13,7 +13,7 @@ module.exports = async (phase, { defaultConfig }) => {
 
 module.exports = {
     publicRuntimeConfig: {
-        ENVIRONMENT: process.env.NODE_ENV,
+        ENVIRONMENT: process.env.NODE_ENV ?? null,
         DEFAULT_SITE: process.env.DEFAULT_SITE ?? null,
     },
 };
