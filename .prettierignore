@@ -1,0 +1,14 @@
+node_modules
+.next
+.github
+.swc
+.env
+tailwind.config.js
+package.json
+package-lock.json
+README.md
+tsconfig.json
+# Ignore artifacts:
+build
+coverage
+.eslintrc.json

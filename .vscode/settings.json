@@ -1,0 +1,13 @@
+{
+    "appService.deploySubpath": ".",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.linkedEditing": true,
+    "javascript.preferences.renameMatchingJsxTags": true,
+    "typescript.preferences.renameMatchingJsxTags": true,
+    "appService.zipIgnorePattern": [".vscode{,/**}", ".env{,/**}"],
+    "search.exclude": {
+        "**/*.code-search": false,
+        "**/bower_components": false
+    }
+}
