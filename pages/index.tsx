@@ -1,7 +1,7 @@
 import { GetServerSidePropsContext, NextPage } from 'next';
 import serverSideWrapper from '../utils/serverSideWrapper';
 import { getData } from '../utils/axiosClientWrapper';
-
+// import { mmlog } from 'mm-log';
 import { loaderContext } from '../components/loader/loadContext';
 import ErrorsWrapper from '../utils/ErrorsWrapper';
 import { ErrorAlert } from '../components/errorAlert/errorAlert';
@@ -18,6 +18,7 @@ const Landing: NextPage<any> = (props: any) => {
     // const { setLoading } = useContext(loaderContext);
 
     console.log('props', props);
+    // mmlog('test');
 
     if (!props.data) {
         return ErrorAlert(

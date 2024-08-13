@@ -16,4 +16,10 @@ module.exports = {
         ENVIRONMENT: process.env.NODE_ENV ?? null,
         DEFAULT_SITE: process.env.DEFAULT_SITE ?? null,
     },
+    webpack: (config, { isServer }) => {
+        if (!isServer) {
+            config.resolve.symlinks = false;
+        }
+        return config;
+    },
 };
